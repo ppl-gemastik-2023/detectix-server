@@ -30,7 +30,6 @@ export async function processDetail(item: ProcessedData) {
         headers: {
             'X-Requested-With': 'XMLHttpRequest',
             'Content-Type': 'application/x-www-form-urlencoded',
-            'Cookie': 'TS01d5cb1b=016cc907c082c3d3a889237ced4266904ff9c56aaa6421081c18523fbe54161432d8a83a5cf6759bdd1f5adc7cc7b74e4c179d7b0a88ffb274eccae89aac89267aed4f3b17; webreg=iqj8e8b08q8n4594ik8hc6t87dio6p70'
         },
         data
     };

@@ -5,7 +5,8 @@
 # RUN npm install
 # RUN npm run build
 
-FROM node:12-alpine AS server
+FROM alpine
+RUN apk add --update nodejs npm
 WORKDIR /app
 COPY package* ./
 COPY ./dist ./dist
