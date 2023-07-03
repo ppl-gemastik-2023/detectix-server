@@ -1,7 +1,12 @@
 import express from 'express';
 import { BPOMRouter } from './bpom/routes';
+import cors from "cors"
 
 const app = express();
+
+app.use(cors({
+    origin: ["https://detectix.vercel.app/", "http://localhost:8080"]
+}))
 
 app.use('/bpom', BPOMRouter)
 
