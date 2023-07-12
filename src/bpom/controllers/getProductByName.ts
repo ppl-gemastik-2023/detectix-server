@@ -24,9 +24,9 @@ interface Kirimanfilter {
 
 
 export async function searchByName(req: Request, res: Response) {
-    const { q } = req.query;
+    const { q, filter_by } = req.query;
     const result = await sendBPOMRequest<SearchResult>("https://cekbpom.pom.go.id/search_all_produk", {
-        st_filter: "2",
+        st_filter: filter_by || "2",
         input_search: q,
     });
     res.json(result.data_all_produk)
